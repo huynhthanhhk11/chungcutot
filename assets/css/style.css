@@ -45,7 +45,7 @@ a:hover {
     padding: 0 20px;
 }
 
-/* ======================= Header Mới ======================= */
+/* ======================= Header ======================= */
 .header-wrapper {
     background-color: var(--white-color);
     border-bottom: 1px solid var(--border-color);
@@ -61,14 +61,14 @@ a:hover {
 }
 .logo-link {
     flex-shrink: 0;
-    margin-right: 40px; /* Thêm khoảng cách giữa logo và menu */
+    margin-right: 40px;
 }
 .logo {
     height: 40px; 
     width: auto;
 }
 .main-nav {
-    flex-grow: 1; /* Cho phép menu chiếm không gian còn lại */
+    flex-grow: 1;
 }
 .main-nav ul {
     margin: 0;
@@ -79,7 +79,7 @@ a:hover {
 }
 .main-nav li {
     margin: 0 15px;
-    position: relative; /* Cần cho menu dropdown */
+    position: relative;
 }
 .main-nav a {
     color: var(--text-dark);
@@ -92,55 +92,11 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* Dropdown Arrow */
-.has-dropdown > a::after {
-    content: '▾';
-    font-size: 12px;
-    margin-left: 6px;
-    display: inline-block;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    display: none; /* Ẩn mặc định */
-    position: absolute;
-    top: 100%;
-    left: -15px;
-    background-color: var(--white-color);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    list-style: none;
-    padding: 10px 0;
-    margin-top: 0;
-    width: 220px;
-    border-radius: 8px;
-    z-index: 1001;
-    border: 1px solid var(--border-color);
-}
-.has-dropdown:hover > .dropdown-menu {
-    display: block; /* Hiện khi hover */
-}
-.dropdown-menu li {
-    margin: 0;
-}
-.dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    white-space: nowrap;
-    font-size: 15px;
-    font-weight: 400;
-    border: none;
-}
-.dropdown-menu a:hover {
-    background-color: var(--gray-bg);
-}
-
-
 .header-actions {
     display: flex;
     align-items: center;
 }
 
-/* Nút tìm kiếm mới */
 .search-button-new {
     display: flex;
     align-items: center;
@@ -158,7 +114,6 @@ a:hover {
     border-color: var(--primary-color);
 }
 
-
 .menu-toggle {
     display: none;
     background: none;
@@ -175,9 +130,6 @@ a:hover {
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
 }
-
-/* ======================= End Header Mới ======================= */
-
 
 /* --- Banner --- */
 .banner-section {
@@ -367,10 +319,9 @@ a:hover {
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 1024px) {
-    .main-nav { display: none; } /* Tạm ẩn menu để xử lý mobile */
+    .main-nav { display: none; }
     .menu-toggle { display: block; }
 
-    /* Xử lý hiển thị menu mobile khi có class is-open */
     .main-nav.is-open {
         display: block;
         position: absolute;
@@ -394,21 +345,6 @@ a:hover {
         width: 100%;
         box-sizing: border-box;
         border-bottom: 1px solid var(--border-color);
-    }
-    .has-dropdown > a::after {
-        float: right;
-        margin-top: 5px;
-    }
-    .dropdown-menu {
-        display: none !important; /* Luôn ẩn dropdown trên mobile, cần JS để xử lý click */
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        padding-left: 20px;
-    }
-    .dropdown-menu a {
-        background-color: var(--body-bg);
     }
 }
 
