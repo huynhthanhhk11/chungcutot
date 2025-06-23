@@ -2,27 +2,22 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // 1. Mobile Menu Toggle
     const menuButton = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
+    const mainNav = document.getElementById('main-nav'); // Giả sử nav mobile sẽ được đưa vào đây
 
     if (menuButton && mainNav) {
         menuButton.addEventListener('click', () => {
-            mainNav.classList.toggle('is-open');
+            // Logic mở menu mobile của bạn sẽ ở đây
+            // Ví dụ: mainNav.classList.toggle('is-open');
         });
     }
 
-    // 2. Footer Accordion on Mobile
+    // 2. Footer Accordion on Mobile (Giữ nguyên)
     const accordionToggles = document.querySelectorAll('.footer-widget h4.accordion-toggle');
-
     accordionToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
-            // Check if the screen is mobile-sized
             if (window.innerWidth <= 767) {
-                const content = toggle.nextElementSibling; // The <ul> list
-                
-                // Toggle active class on the title
                 toggle.classList.toggle('active');
-
-                // Toggle display of the content
+                const content = toggle.nextElementSibling;
                 if (content.style.display === "block") {
                     content.style.display = "none";
                 } else {
@@ -31,5 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // 3. (MỚI) Xử lý Header khi cuộn trang
+    const header = document.querySelector('.header-wrapper');
+    if (header) {
+        const scrollThreshold = 50; // Ngưỡng cuộn (px) để header thay đổi
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 
 });
