@@ -95,52 +95,13 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* === Dropdown Menu Styling (Thêm lại) === */
+/* Giữ lại mũi tên để demo */
 .has-dropdown > a::after {
     content: '▾';
     font-size: 12px;
     margin-left: 6px;
     display: inline-block;
 }
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 90%; /* Điều chỉnh vị trí của dropdown */
-    left: -15px;
-    background-color: var(--white-color);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    list-style: none;
-    padding: 10px 0;
-    margin-top: 0;
-    width: 220px;
-    border-radius: 8px;
-    z-index: 1001;
-    border: 1px solid var(--border-color);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-}
-.has-dropdown:hover > .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-.dropdown-menu li {
-    margin: 0;
-}
-.dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    white-space: nowrap;
-    font-size: 15px;
-    font-weight: 400;
-}
-.dropdown-menu a:hover {
-    background-color: var(--gray-bg);
-}
-
 
 .search-button-new {
     display: flex;
@@ -215,18 +176,15 @@ a:hover {
     color: var(--text-light);
 }
 
-/* === Banner Image (Cập nhật) === */
 .banner-image {
     flex-basis: 45%;
     max-width: 450px;
-    background-color: transparent; /* Đảm bảo không có nền riêng */
+    background-color: transparent;
 }
 .banner-image img {
-    /* Bỏ shadow và radius để ảnh PNG hòa vào nền một cách tự nhiên */
     box-shadow: none;
     border-radius: 0;
 }
-
 
 /* --- Main Content & Article Grid --- */
 .main-container {
