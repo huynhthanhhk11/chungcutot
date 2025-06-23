@@ -104,14 +104,13 @@ a:hover {
     justify-content: center;
     border-radius: 50%;
     transition: background-color 0.3s;
+    color: var(--text-dark); /* Color for SVG */
 }
 .search-button:hover {
     background-color: var(--body-bg);
+    color: var(--primary-color); /* Hover color for SVG */
 }
-.search-button img {
-    width: 22px;
-    height: 22px;
-}
+
 .menu-toggle {
     display: none;
     background: none;
@@ -539,8 +538,11 @@ a:hover {
     .footer-widget h4.widget-title::after {
         display: none; /* Hide border bottom on title */
     }
+
+    /* Chevron Icon SVG (ĐÃ CẬP NHẬT) */
     .footer-widget h4.widget-title::before {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ccc' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        color: #ccc; /* Set the color for the SVG */
         transition: transform 0.3s ease;
     }
      .footer-widget h4.active::before {
